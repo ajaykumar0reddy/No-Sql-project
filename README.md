@@ -3,6 +3,7 @@
 A simple full-stack application managing faculty-student-research relationships using Next.js and Neo4j.
 
 ## Tech Stack
+
 - **Frontend**: Next.js (App Router), React
 - **Styling**: Neo-brutalism (CSS Modules/Global CSS)
 - **Backend**: Next.js API Routes
@@ -12,6 +13,7 @@ A simple full-stack application managing faculty-student-research relationships 
 ## Setup Instructions
 
 1. **Install Dependencies**
+
    ```bash
    npm install
    ```
@@ -30,17 +32,20 @@ A simple full-stack application managing faculty-student-research relationships 
    ```bash
    npm run dev
    ```
+
    - Open [http://localhost:3000](http://localhost:3000)
 
 ## Graph Data Model & Cypher Queries
 
 ### Nodes
+
 - **Faculty**: `(:Faculty {facultyId, name, department, designation})`
 - **Student**: `(:Student {studentId, name, program})`
 - **ResearchArea**: `(:ResearchArea {areaId, name})`
 - **Project**: `(:Project {projectId, title, status})`
 
 ### Relationships
+
 - `(:Faculty)-[:GUIDES]->(:Student)`
 - `(:Faculty)-[:EXPERT_IN]->(:ResearchArea)`
 - `(:Student)-[:WORKS_ON]->(:Project)`
@@ -49,25 +54,30 @@ A simple full-stack application managing faculty-student-research relationships 
 ### Useful Cypher Queries
 
 **View all relationships:**
+
 ```cypher
 MATCH (n)-[r]->(m) RETURN n, r, m
 ```
 
 **Find students guided by a specific faculty:**
+
 ```cypher
 MATCH (f:Faculty {name: "Dr. Smith"})-[:GUIDES]->(s:Student) RETURN s.name
 ```
 
 **Find projects in a specific area:**
+
 ```cypher
 MATCH (p:Project)-[:BELONGS_TO]->(r:ResearchArea {name: "AI"}) RETURN p.title
 ```
 
 **Delete all data (Reset):**
+
 ```cypher
 MATCH (n) DETACH DELETE n
 ```
-hello world
-new 
 
-mee jhbvj
+hello guys
+welcome
+
+the End
