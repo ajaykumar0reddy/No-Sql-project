@@ -22,4 +22,5 @@
 - **MATCH**: Like `SELECT` in SQL, finds patterns.
 - **CREATE**: Creates new nodes/relationships.
 - **MERGE**: "Create if not exists".
-- **RETURN**: Defines what data to send frontend.
+- **RETURN**: Defines what data to send.
+  this is a good day
