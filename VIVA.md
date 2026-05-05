@@ -23,4 +23,4 @@
 - **CREATE**: Creates new nodes/relationships.
 - **MERGE**: "Create if not exists".
 - **RETURN**: Defines what data to send frontend.
-this was a bad day
+  this was a good day
